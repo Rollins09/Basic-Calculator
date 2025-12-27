@@ -1,53 +1,126 @@
 <!DOCTYPE html>
+<!-- Declares the document type as HTML5 -->
+
 <html lang="en">
+<!-- Root element of the HTML page, language set to English -->
+
 <head>
     <meta charset="UTF-8">
+    <!-- Sets character encoding to UTF-8 (supports all characters) -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the page responsive for mobile and different screen sizes -->
+
     <title>Basic Calculator</title>
+    <!-- Title shown on the browser tab -->
+
     <link rel="stylesheet" href="style.css">
+    <!-- Links external CSS file for styling the calculator -->
 </head>
+
 <body>
+<!-- Body contains everything visible on the webpage -->
 
 <div class="calculator">
+    <!-- Main container for the calculator -->
+
     <input type="text" id="display" readonly placeholder="0">
+    <!-- Display screen of the calculator -->
+    <!-- readonly prevents typing using keyboard -->
+    <!-- placeholder shows 0 when empty -->
 
     <div class="buttons">
-    <!-- Memory Buttons -->
-    <button class="operator" onclick="memoryClear()">MC</button>
-    <button class="operator" onclick="memoryRecall()">MR</button>
-    <button class="operator" onclick="memoryAdd()">M+</button>
-    <button class="operator" onclick="memorySubtract()">M-</button>
+        <!-- Container for all calculator buttons -->
 
-    <!-- Operations -->
-    <button class="operator" onclick="clearDisplay()">C</button>
-    <button class="operator" onclick="appendValue('/')">÷</button>
-    <button class="operator" onclick="appendValue('*')">×</button>
-    <button class="operator" onclick="deleteLast()">⌫</button>
+        <!-- ===== Memory Buttons ===== -->
 
-    <button onclick="appendValue('7')">7</button>
-    <button onclick="appendValue('8')">8</button>
-    <button onclick="appendValue('9')">9</button>
-    <button class="operator" onclick="appendValue('-')">−</button>
+        <button class="operator" onclick="memoryClear()">MC</button>
+        <!-- Clears stored memory value -->
 
-    <button onclick="appendValue('4')">4</button>
-    <button onclick="appendValue('5')">5</button>
-    <button onclick="appendValue('6')">6</button>
-    <button class="operator" onclick="appendValue('+')">+</button>
+        <button class="operator" onclick="memoryRecall()">MR</button>
+        <!-- Recalls stored memory value to display -->
 
-    <button onclick="appendValue('1')">1</button>
-    <button onclick="appendValue('2')">2</button>
-    <button onclick="appendValue('3')">3</button>
-    <button class="equals" onclick="calculateResult()">=</button>
+        <button class="operator" onclick="memoryAdd()">M+</button>
+        <!-- Adds current display value to memory -->
 
-    <button onclick="appendValue('.')">.</button>
-    <button onclick="calculatePercentage()">%</button>
-    <button onclick="calculateSquareRoot()">√</button>
-    <button onclick="appendValue('0')" class="zero">0</button>
+        <button class="operator" onclick="memorySubtract()">M-</button>
+        <!-- Subtracts current display value from memory -->
+
+        <!-- ===== Operation Buttons ===== -->
+
+        <button class="operator" onclick="clearDisplay()">C</button>
+        <!-- Clears the entire display -->
+
+        <button class="operator" onclick="appendValue('/')">÷</button>
+        <!-- Division operator -->
+
+        <button class="operator" onclick="appendValue('*')">×</button>
+        <!-- Multiplication operator -->
+
+        <button class="operator" onclick="deleteLast()">⌫</button>
+        <!-- Deletes the last entered character -->
+
+        <!-- ===== Number Buttons ===== -->
+
+        <button onclick="appendValue('7')">7</button>
+        <!-- Adds number 7 to display -->
+
+        <button onclick="appendValue('8')">8</button>
+        <!-- Adds number 8 -->
+
+        <button onclick="appendValue('9')">9</button>
+        <!-- Adds number 9 -->
+
+        <button class="operator" onclick="appendValue('-')">−</button>
+        <!-- Subtraction operator -->
+
+        <button onclick="appendValue('4')">4</button>
+        <!-- Adds number 4 -->
+
+        <button onclick="appendValue('5')">5</button>
+        <!-- Adds number 5 -->
+
+        <button onclick="appendValue('6')">6</button>
+        <!-- Adds number 6 -->
+
+        <button class="operator" onclick="appendValue('+')">+</button>
+        <!-- Addition operator -->
+
+        <button onclick="appendValue('1')">1</button>
+        <!-- Adds number 1 -->
+
+        <button onclick="appendValue('2')">2</button>
+        <!-- Adds number 2 -->
+
+        <button onclick="appendValue('3')">3</button>
+        <!-- Adds number 3 -->
+
+        <button class="equals" onclick="calculateResult()">=</button>
+        <!-- Calculates and displays the result -->
+
+        <!-- ===== Special Function Buttons ===== -->
+
+        <button onclick="appendValue('.')">.</button>
+        <!-- Adds decimal point -->
+
+        <button onclick="calculatePercentage()">%</button>
+        <!-- Converts number to percentage -->
+
+        <button onclick="calculateSquareRoot()">√</button>
+        <!-- Calculates square root of the number -->
+
+        <button onclick="appendValue('0')" class="zero">0</button>
+        <!-- Adds number 0 -->
+        <!-- class="zero" usually makes it wider -->
+
+    </div>
+    <!-- End of buttons container -->
 
 </div>
-
-</div>
+<!-- End of calculator container -->
 
 <script src="script.js"></script>
+<!-- Links external JavaScript file that handles calculator logic -->
+
 </body>
 </html>
