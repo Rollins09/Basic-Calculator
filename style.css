@@ -1,84 +1,161 @@
+/* Applies styles to all elements */
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    /* Ensures padding and border are included in element width/height */
+
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    /* Sets a clean, modern font for the entire page */
 }
 
+/* Styles for the whole page */
 body {
-    height: 100vh;
-    margin: 0;
+    height: 100vh; 
+    /* Makes body height equal to full viewport height */
+
+    margin: 0; 
+    /* Removes default browser margin */
+
     background: linear-gradient(135deg, #667eea, #764ba2);
+    /* Creates a diagonal gradient background */
+
     display: flex;
+    /* Enables flexbox layout */
+
     justify-content: center;
+    /* Centers calculator horizontally */
+
     align-items: center;
+    /* Centers calculator vertically */
 }
 
 /* Calculator container */
 .calculator {
     background-color: #1e1e1e;
+    /* Dark background for calculator */
+
     padding: 14px;
+    /* Inner spacing inside calculator */
+
     border-radius: 18px;
+    /* Rounded corners */
+
     width: 330px;
-    max-height: 95vh;              /* KEY FIX */
+    /* Fixed width of calculator */
+
+    max-height: 95vh;              
+    /* Prevents calculator from overflowing the screen */
+
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    /* Adds depth using shadow */
 }
 
-/* Display */
+/* Calculator display input */
 #display {
     width: 100%;
-    height: 52px;                 /* Reduced */
+    /* Display spans full calculator width */
+
+    height: 52px;                 
+    /* Sets height of display */
+
     font-size: 24px;
+    /* Large text for easy reading */
+
     padding: 8px 12px;
+    /* Inner spacing for text */
+
     text-align: right;
+    /* Aligns numbers to the right like a real calculator */
+
     border-radius: 12px;
+    /* Rounded display edges */
+
     border: none;
+    /* Removes default input border */
+
     margin-bottom: 12px;
+    /* Space below display */
 }
 
-/* Button grid */
+/* Button grid container */
 .buttons {
     display: grid;
+    /* Enables CSS grid layout */
+
     grid-template-columns: repeat(4, 1fr);
+    /* Creates 4 equal-width columns */
+
     gap: 8px;   
-    grid-auto-flow: row;                  /* Reduced spacing */
+    /* Space between buttons */
+
+    grid-auto-flow: row;
+    /* Places buttons row by row */
 }
 
-/* Buttons */
+/* General button styles */
 button {
-    height: 50px;                 /* Reduced */
+    height: 50px;                 
+    /* Sets button height */
+
     font-size: 17px;
+    /* Button text size */
+
     border: none;
+    /* Removes default border */
+
     border-radius: 14px;
+    /* Rounded button edges */
+
     cursor: pointer;
+    /* Changes cursor to pointer on hover */
+
     background-color: #2f2f2f;
+    /* Default dark button color */
+
     color: white;
+    /* Button text color */
+
     transition: all 0.15s ease;
+    /* Smooth hover animation */
 }
 
+/* Button hover effect */
 button:hover {
     transform: scale(1.03);
+    /* Slight zoom effect when hovered */
 }
 
-/* Operators */
+/* Operator buttons (+, −, ×, ÷, etc.) */
 .operator {
     background-color: #ff9800;
+    /* Orange color for operators */
 }
 
+/* Operator hover effect */
 .operator:hover {
     background-color: #e68900;
+    /* Darker orange on hover */
 }
 
-/* Equals button */
+/* Equals button (=) */
 .equals {
     background-color: #4caf50;
-    grid-row: span 2;                /* ✅ KEY FIX */
-    height: auto;                    /* ✅ Let grid control height */
+    /* Green color for equals button */
+
+    grid-row: span 2;                
+    /* Makes the equals button taller */
+
+    height: auto;                    
+    /* Lets grid decide height */
 }
 
+/* Equals hover effect */
 .equals:hover {
     background-color: #43a047;
+    /* Darker green on hover */
 }
 
-/* Zero button */
+/* Zero button (0) */
 .zero {
     grid-column: span 2;
+    /* Makes zero button wider */
 }
