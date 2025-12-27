@@ -20,4 +20,4 @@ This Basic Calculator is a web-based application that performs arithmetic operat
 3. Start performing calculations
 
 ## Author
-Developed as part of a front-end development assignment.
+Developed as part of a front-end development assignment by Lalith N.
